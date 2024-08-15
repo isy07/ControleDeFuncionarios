@@ -144,8 +144,15 @@ namespace ControleFuncionarios.Services.FuncionarioService
                     serviceResponse.Mensagem = "Funcionário não encontrado!";
                     serviceResponse.Sucesso = false;
                 }
+                if (funcionario.Ativo == true)
+                {
+                    funcionario.Ativo = false;
+                }
+                else
+                {
+                    funcionario.Ativo=true;
+                }
 
-                funcionario.Ativo = false;
                 funcionario.DataAlteracao = DateTime.Now.ToLocalTime();
 
                 _context.Funcionarios.Update(funcionario);

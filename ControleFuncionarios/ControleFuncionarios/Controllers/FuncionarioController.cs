@@ -36,7 +36,7 @@ namespace ControleFuncionarios.Controllers
             return Ok(await _funcionarioService.CreateFuncionario(novoFuncionario));
         }
 
-        [HttpPut("inativa-funcionario")]
+        [HttpPut("inativa-funcionario/{id}")]
         public async Task<ActionResult<ServiceResponse<List<FuncionarioModel>>>> InativaFuncionario(int id)
         {
             ServiceResponse<List<FuncionarioModel>> serviceResponse = await _funcionarioService.InativaFuncionario(id);

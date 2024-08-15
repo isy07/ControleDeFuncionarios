@@ -40,3 +40,15 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+.vs/
+**/*.suo
+**/*.vscode/
+**/*.vsidx
+
+**/*.suo
+**/*.user
+**/*.vscode/
+**/*.vsidx
+**/bin/
+**/obj/

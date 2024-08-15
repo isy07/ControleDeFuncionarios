@@ -16,7 +16,6 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void{
     this.funcionarioService.GetFuncionarios().subscribe(data=>{
-      console.log(data);
       const dados = data.dados;
 
       dados.map((item) => {
