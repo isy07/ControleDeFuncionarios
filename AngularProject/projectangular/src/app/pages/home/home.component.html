@@ -1,44 +1,69 @@
+
+<mat-card>
 <div class="funcionario-box">
-  <button routerLink="/cadastro">Cadastrar novo funcionário</button>
+  <button mat-raised-button color="primary" routerLink="/cadastro">Cadastrar novo funcionário</button>
     <div class="input-box">
-      <label>Procurar:</label>
-      <input type="text" placeholder="Buscar funcionário por nome..." (input)="search($event)">
+      <mat-form-field>
+      <mat-label>Procurar:</mat-label>
+      <input matInput type="text" placeholder="Buscar funcionário por nome..." (input)="search($event)">
+    </mat-form-field>
     </div>
 </div>
+<table mat-table [dataSource]="funcionarios" class="mat-elevation-z8">
 
-<table class="table">
-  <thead>
-    <tr>
-      <th></th>
-      <th>Nome</th>
-      <th>Sobrenome</th>
-      <th>Departamento</th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody *ngFor="let funcionario of funcionarios">
-    <tr>
-      <td>
-        <div *ngIf="funcionario.ativo == true; else inativo">
+  <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+  <!-- Position Column -->
+  <ng-container matColumnDef="Situacao">
+    <th mat-header-cell *matHeaderCellDef></th>
+    <td mat-cell *matCellDef="let funcionario">
+      <div *ngIf="funcionario.ativo == true; else inativo">
         <img src="assets/images/ativo.png" alt="" style="height: 15px; width: 15px; margin-top: 4px;">
         </div>
         <ng-template #inativo>
           <img src="assets/images/inativo.png" alt="" style="height: 15px; width: 15px; margin-top: 4px;">
         </ng-template>
+    </td>
+  </ng-container>
 
-      </td>
-      <td>{{funcionario.nome}}</td>
-      <td>{{funcionario.sobrenome}}</td>
-      <td>{{funcionario.departamento}}</td>
-      <td>
-        <button routerLink="/editar/{{funcionario.id}}">Editar</button>
-        <button routerLink="/detalhes/{{funcionario.id}}">Detalhes</button>
-      </td>
-      <td>
-        <button (click)="funcao()">Excluir</button>
-      </td>
-    </tr>
-  </tbody>
+  <!-- Name Column -->
+  <ng-container matColumnDef="Nome">
+    <th mat-header-cell *matHeaderCellDef> Nome </th>
+    <td mat-cell *matCellDef="let funcionario"> {{funcionario.nome}} </td>
+  </ng-container>
 
+  <!-- Weight Column -->
+  <ng-container matColumnDef="Sobrenome">
+    <th mat-header-cell *matHeaderCellDef> Sobrenome </th>
+    <td mat-cell *matCellDef="let funcionario"> {{funcionario.sobrenome}} </td>
+  </ng-container>
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="Departamento">
+    <th mat-header-cell *matHeaderCellDef> Departamento </th>
+    <td mat-cell *matCellDef="let funcionario"> {{funcionario.departamento}} </td>
+  </ng-container>
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="Acoes">
+    <th mat-header-cell *matHeaderCellDef></th>
+    <td mat-cell *matCellDef="let funcionario">
+     <button mat-raised-button color="accent" routerLink="/editar/{{funcionario.id}}">Editar</button>
+      <button mat-raised-button color="" routerLink="/detalhes/{{funcionario.id}}">Detalhes</button>
+    </td>
+  </ng-container>
+
+   <!-- Symbol Column -->
+   <ng-container matColumnDef="Excluir">
+    <th mat-header-cell *matHeaderCellDef></th>
+    <td mat-cell *matCellDef="let funcionario">
+      <button mat-raised-button color="warn" (click)="OpenDialog(funcionario.id)">Excluir</button>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="colunas"></tr>
+  <tr mat-row *matRowDef="let row; columns: colunas;"></tr>
 </table>
+</mat-card>
+

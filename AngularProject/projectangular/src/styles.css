@@ -1,13 +1,41 @@
 html, body{
-  width: 100vw;
-  height: 100vw;
-  /* font-size: 62.5%; */
+  width: 90vw;
+  height: 40vw;
+  font-size: 62.5%;
+  /* overflow: hidden; */
 }
 
-.container{
-  width: 100%;
+mat-card{
+  width: 80%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0 auto;
+  padding: 3rem;
+  margin-top: 5rem;
+}
+
+mat-form-field{
+  width: 70%;
+}
+
+.input-box{
+  width: 140%;
+}
+
+.btn-box{
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-box button{
+  width: 50%;
+}
+
+.detalhes{
+  width: 500px;
+
 }
