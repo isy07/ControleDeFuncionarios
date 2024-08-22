@@ -21,6 +21,8 @@ import {MatTableModule} from '@angular/material/table';
 import {MatDialogModule} from '@angular/material/dialog';
 import { ExcluirComponent } from './componentes/excluir/excluir.component';
 
+import { ToastrModule } from 'ngx-toastr';
+
 
 @NgModule({
   declarations: [
@@ -30,7 +32,7 @@ import { ExcluirComponent } from './componentes/excluir/excluir.component';
     FuncionarioFormComponent,
     EditarComponent,
     DetalhesComponent,
-    ExcluirComponent
+    ExcluirComponent,
   ],
   imports: [
     BrowserModule,
@@ -44,7 +46,13 @@ import { ExcluirComponent } from './componentes/excluir/excluir.component';
     MatInputModule,
     MatSelectModule,
     MatTableModule,
-    MatDialogModule
+    MatDialogModule,
+    ToastrModule.forRoot({
+      timeOut: 3000,
+      positionClass: 'toast-bottom-right',
+      preventDuplicates: true,
+      progressBar: true
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

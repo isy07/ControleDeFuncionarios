@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { Funcionario } from 'src/app/models/funcionarios';
 import { FuncionarioService } from 'src/app/services/funcionario.service';
 
@@ -15,7 +16,9 @@ export class CadastroComponent {
 
   constructor(
     private funcionarioService: FuncionarioService,
-    private router: Router){
+    private router: Router,
+    private toastr: ToastrService,
+  ){
 
   }
 
@@ -23,6 +26,10 @@ export class CadastroComponent {
     this.funcionarioService.CreateFuncionario(funcionario).subscribe(
       (data) => {
         this.router.navigate(['/'])
+        this.toastr.success('Funcionário cadastrado com Sucesso!', 'Sucesso');
+      },
+      (error) => {
+        this.toastr.error('Erro ao cadastrar funcionário!', 'Erro');
       }
     )
 

@@ -3,6 +3,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { ExcluirComponent } from 'src/app/componentes/excluir/excluir.component';
 import { Funcionario } from 'src/app/models/funcionarios';
 import { FuncionarioService } from 'src/app/services/funcionario.service';
+import { NotificationService } from 'src/app/services/notification.service';
 
 @Component({
   selector: 'app-home',
@@ -17,10 +18,22 @@ export class HomeComponent implements OnInit {
   colunas = ['Situacao', 'Nome', 'Sobrenome', 'Departamento', 'Acoes', 'Excluir'];
 
   constructor(private funcionarioService: FuncionarioService,
-              public dialog: MatDialog
+              public dialog: MatDialog,
+              private notificationService: NotificationService
   ){ }
 
   ngOnInit(): void{
+
+    this.carregarFuncionarios();
+
+    this.notificationService.delete$.subscribe(() => {
+      this.carregarFuncionarios();
+    });
+
+
+  }
+
+  carregarFuncionarios(){
     this.funcionarioService.GetFuncionarios().subscribe(data=>{
       const dados = data.dados;
 

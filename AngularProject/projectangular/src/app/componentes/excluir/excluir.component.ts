@@ -1,8 +1,10 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { Funcionario } from 'src/app/models/funcionarios';
 import { FuncionarioService } from 'src/app/services/funcionario.service';
+import { NotificationService } from 'src/app/services/notification.service';
 
 @Component({
   selector: 'app-excluir',
@@ -14,9 +16,15 @@ export class ExcluirComponent implements OnInit{
   inputData: any;
   funcionario!: Funcionario;
 
+  funcionarios: Funcionario[] = [];
+  funcionariosGeral: Funcionario[] = [];
+
   constructor(
     private funcionarioService: FuncionarioService,
     private router: Router,
+    private toastr: ToastrService,
+    private notificationService: NotificationService,
+
     @Inject(MAT_DIALOG_DATA) public data: any,
     private ref: MatDialogRef<ExcluirComponent>
   ){
@@ -31,15 +39,31 @@ export class ExcluirComponent implements OnInit{
     });
   }
 
+
   Excluir(){
-    this.funcionarioService.ExcluirFuncionario(this.inputData.id).subscribe((data=>{
-      this.ref.close
-      window.location.reload();
+    this.funcionarioService.ExcluirFuncionario(this.inputData.id).subscribe((data)=>{
+      this.toastr.success('Funcionário excluído com Sucesso!', 'Sucesso');
+      this.notificationService.notifyDelete(); // Notifica o componente pai
+      this.ref.close();
+
+
+    },
+    (error) => {
+      this.toastr.error('Erro ao cadastrar funcionário!', 'Erro');
     }
-  ))
+  )
   }
 
   Cancelar(){
     this.ref.close
   }
 }
+
+
+// (data) => {
+//   this.router.navigate(['/'])
+//   this.toastr.success('Funcionario cadastrado com Sucesso!', 'Sucesso');
+// },
+// (error) => {
+//   this.toastr.error('Erro ao cadastrar funcionário!', 'Erro');
+// }

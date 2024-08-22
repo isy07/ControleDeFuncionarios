@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { Funcionario } from 'src/app/models/funcionarios';
 import { FuncionarioService } from 'src/app/services/funcionario.service';
 
@@ -17,7 +18,8 @@ export class EditarComponent implements OnInit {
   constructor(
     private funcionarioService: FuncionarioService,
     private route: ActivatedRoute,
-    private router: Router){
+    private router: Router,
+    private toastr: ToastrService){
 
   }
 
@@ -33,9 +35,14 @@ export class EditarComponent implements OnInit {
 
   editarFuncionario(funcionario: Funcionario){
     this.funcionarioService.UpdateFuncionario(funcionario).subscribe(
-      (data=>{
+      (data) => {
         this.router.navigate(['/'])
-      })
+        this.toastr.success('Funcionário editado com Sucesso!', 'Sucesso');
+      },
+      (error) => {
+        this.toastr.error('Erro ao editar funcionário!', 'Erro');
+      }
+
     )
 
   }

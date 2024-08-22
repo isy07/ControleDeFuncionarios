@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { Funcionario } from 'src/app/models/funcionarios';
 import { FuncionarioService } from 'src/app/services/funcionario.service';
 
@@ -17,7 +18,8 @@ export class DetalhesComponent implements OnInit {
   constructor(
     private funcionarioService: FuncionarioService,
     private route: ActivatedRoute,
-    private router: Router){
+    private router: Router,
+    private toastr: ToastrService){
 
   }
 
@@ -37,7 +39,15 @@ export class DetalhesComponent implements OnInit {
   InativaFuncionario(){
     this.funcionarioService.InativaFuncionario(this.id).subscribe(
       (data) => {
-        this.router.navigate(['']);
+        this.router.navigate(['/']);
+        if (this.funcionario?.ativo){
+          this.toastr.success('Funcionário inativado com Sucesso!', 'Sucesso');
+        }else{
+          this.toastr.success('Funcionário ativado com Sucesso!', 'Sucesso');
+        }
+      },
+      (error) => {
+        this.toastr.error('Erro ao cadastrar funcionário!', 'Erro');
       }
     )
   }
