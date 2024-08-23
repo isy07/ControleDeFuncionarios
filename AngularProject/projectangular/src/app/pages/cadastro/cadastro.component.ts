@@ -25,14 +25,16 @@ export class CadastroComponent {
   createFuncionario(funcionario: Funcionario){
     this.funcionarioService.CreateFuncionario(funcionario).subscribe(
       (data) => {
-        this.router.navigate(['/'])
-        this.toastr.success('Funcionário cadastrado com Sucesso!', 'Sucesso');
-      },
+        if (data.sucesso) {
+        this.router.navigate(['/']);
+         this.toastr.success('Funcionário cadastrado com sucesso!', 'Sucesso');
+      } else {
+         this.toastr.error(data.mensagem, 'Erro');
+      }
+    },
       (error) => {
-        this.toastr.error('Erro ao cadastrar funcionário!', 'Erro');
+         this.toastr.error('Erro ao cadastrar funcionário!', 'Erro');
       }
     )
-
   }
-
 }

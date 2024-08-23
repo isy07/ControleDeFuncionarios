@@ -36,15 +36,16 @@ export class EditarComponent implements OnInit {
   editarFuncionario(funcionario: Funcionario){
     this.funcionarioService.UpdateFuncionario(funcionario).subscribe(
       (data) => {
-        this.router.navigate(['/'])
-        this.toastr.success('Funcionário editado com Sucesso!', 'Sucesso');
-      },
-      (error) => {
-        this.toastr.error('Erro ao editar funcionário!', 'Erro');
+        if (data.sucesso) {
+        this.router.navigate(['/']);
+         this.toastr.success('Funcionário editado com sucesso!', 'Sucesso');
+      } else {
+        this.toastr.error(data.mensagem, 'Erro');
       }
-
+    },
+      (error) => {
+         this.toastr.error('Erro ao editar funcionário!', 'Erro');
+      }
     )
-
   }
-
 }

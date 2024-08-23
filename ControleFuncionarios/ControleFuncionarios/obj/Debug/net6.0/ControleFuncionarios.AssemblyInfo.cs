@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ControleFuncionarios")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5f6db4cc9f730548233bc207d3e96dca95b27111")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8f1b24e427cb81fc57e4bc5875a9bac8bcc23880")]
 [assembly: System.Reflection.AssemblyProductAttribute("ControleFuncionarios")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ControleFuncionarios")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
