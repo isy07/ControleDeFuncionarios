@@ -37,4 +37,12 @@ export class FuncionarioService {
   ExcluirFuncionario(id: number) : Observable<Response<Funcionario[]>>{
     return this.http.delete<Response<Funcionario[]>>(`${this.apiUrl}?id=${id}`);
   }
+
+  GetFuncionariosAtivo(): Observable<any> {
+    return this.http.get<any>(`${this.apiUrl}/funcionario-ativo`);
+  }
+
+  GetFuncionariosInativo(): Observable<any> {
+    return this.http.get<any>(`${this.apiUrl}/funcionario-inativo`);
+  }
 }

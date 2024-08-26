@@ -7,3 +7,27 @@
   align-items: left;
   margin-bottom: 2rem;
 }
+
+.input-box1{
+  width: 1885px;
+}
+
+
+.mat-card-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.table-container {
+  flex: 1;
+  flex-direction: column;
+}
+
+table {
+  flex: 1;
+}
+
+mat-paginator {
+  margin-top: 20px;
+}

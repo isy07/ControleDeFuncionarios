@@ -23,6 +23,10 @@ import { ExcluirComponent } from './componentes/excluir/excluir.component';
 
 import { ToastrModule } from 'ngx-toastr';
 
+import { MatPaginatorIntl, MatPaginatorModule } from '@angular/material/paginator';
+import { PaginatorIntlService } from './services/paginator-intl.service.ts.service';
+
+
 
 @NgModule({
   declarations: [
@@ -47,6 +51,7 @@ import { ToastrModule } from 'ngx-toastr';
     MatSelectModule,
     MatTableModule,
     MatDialogModule,
+    MatPaginatorModule,
     ToastrModule.forRoot({
       timeOut: 3000,
       positionClass: 'toast-bottom-right',
@@ -54,7 +59,8 @@ import { ToastrModule } from 'ngx-toastr';
       progressBar: true
     })
   ],
-  providers: [],
+  providers: [{ provide: MatPaginatorIntl, useClass: PaginatorIntlService }
+],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

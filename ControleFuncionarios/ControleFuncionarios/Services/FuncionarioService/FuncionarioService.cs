@@ -12,37 +12,6 @@ namespace ControleFuncionarios.Services.FuncionarioService
         {
             _context = context;
         }
-        //public async Task<ServiceResponse<List<FuncionarioModel>>> CreateFuncionario(FuncionarioModel novoFuncionario)
-        //{
-        //    ServiceResponse<List<FuncionarioModel>> serviceResponse = new ServiceResponse<List<FuncionarioModel>>();
-
-        //    try
-        //    {
-        //        if(novoFuncionario == null)
-        //        {
-        //            serviceResponse.Dados = null;
-        //            serviceResponse.Mensagem = "Erro ao incluir Funcionário!";
-        //            serviceResponse.Sucesso = false;
-
-        //            return serviceResponse;
-        //        }
-
-        //        _context.Add(novoFuncionario);
-        //        await _context.SaveChangesAsync();
-
-        //        serviceResponse.Dados = _context.Funcionarios.ToList();
-
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        serviceResponse.Mensagem = ex.Message;
-        //        serviceResponse.Sucesso = false;
-        //    }
-        //    return serviceResponse;
-
-
-        //}
-
         public async Task<ServiceResponse<List<FuncionarioModel>>> CreateFuncionario(FuncionarioModel novoFuncionario)
         {
             ServiceResponse<List<FuncionarioModel>> serviceResponse = new ServiceResponse<List<FuncionarioModel>>();
@@ -178,6 +147,53 @@ namespace ControleFuncionarios.Services.FuncionarioService
 
         }
 
+
+        public async Task<ServiceResponse<List<FuncionarioModel>>> GetFuncionariosAtivo()
+        {
+            ServiceResponse<List<FuncionarioModel>> serviceResponse = new ServiceResponse<List<FuncionarioModel>>();
+            try
+            {
+                serviceResponse.Dados = _context.Funcionarios
+                    .Where(x => x.Ativo == true)
+                    .ToList();
+                if (serviceResponse.Dados.Count == 0)
+                {
+                    serviceResponse.Mensagem = "Nenhum funcionário encontrado!";
+                }
+
+            }
+            catch (Exception ex)
+            {
+                serviceResponse.Mensagem = ex.Message;
+                serviceResponse.Sucesso = false;
+            }
+            return serviceResponse;
+
+        }
+
+        public async Task<ServiceResponse<List<FuncionarioModel>>> GetFuncionariosInativo()
+        {
+            ServiceResponse<List<FuncionarioModel>> serviceResponse = new ServiceResponse<List<FuncionarioModel>>();
+            try
+            {
+                serviceResponse.Dados = _context.Funcionarios
+                    .Where(x => x.Ativo == false)
+                    .ToList();
+                if (serviceResponse.Dados.Count == 0)
+                {
+                    serviceResponse.Mensagem = "Nenhum funcionário encontrado!";
+                }
+
+            }
+            catch (Exception ex)
+            {
+                serviceResponse.Mensagem = ex.Message;
+                serviceResponse.Sucesso = false;
+            }
+            return serviceResponse;
+
+        }
+
         public async Task<ServiceResponse<List<FuncionarioModel>>> InativaFuncionario(int id)
         {
             ServiceResponse<List<FuncionarioModel>> serviceResponse = new ServiceResponse<List<FuncionarioModel>>();
@@ -219,60 +235,6 @@ namespace ControleFuncionarios.Services.FuncionarioService
 
 
         }
-
-        //public async Task<ServiceResponse<List<FuncionarioModel>>> UpdateFuncionario(FuncionarioModel editaFuncionario)
-        //{
-        //    ServiceResponse<List<FuncionarioModel>> serviceResponse = new ServiceResponse<List<FuncionarioModel>>();
-
-        //    try
-        //    {
-        //        FuncionarioModel funcionario = _context.Funcionarios.AsNoTracking().FirstOrDefault(x => x.Id == editaFuncionario.Id);
-
-        //        if (funcionario == null)
-        //        {
-        //            serviceResponse.Dados = null;
-        //            serviceResponse.Mensagem = "Funcionário não encontrado!";
-        //            serviceResponse.Sucesso = false;
-        //        }
-
-        //        bool funcionarioExiste = await _context.Funcionarios
-        //        .AnyAsync(f =>
-        //        f.Id != editaFuncionario.Id &&
-        //        f.Nome == editaFuncionario.Nome &&
-        //        f.Sobrenome == editaFuncionario.Sobrenome &&
-        //        f.Departamento == editaFuncionario.Departamento &&
-        //        f.Turno == editaFuncionario.Turno
-        //    );
-
-        //        if (funcionarioExiste)
-        //        {
-        //            serviceResponse.Dados = null;
-        //            serviceResponse.Mensagem = "Erro! Já existe funcionário com estes dados cadastrado no sistema!";
-        //            serviceResponse.Sucesso = false;
-        //            return serviceResponse;
-        //        }
-
-        //        funcionario.DataAlteracao = DateTime.Now.ToLocalTime();
-        //        _context.Funcionarios.Update(editaFuncionario);
-        //        await _context.SaveChangesAsync();
-        //        serviceResponse.Dados = _context.Funcionarios.ToList();
-
-        //        _context.Funcionarios.Update(funcionario);
-        //        await _context.SaveChangesAsync();
-
-        //        serviceResponse.Dados = _context.Funcionarios.ToList();
-
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        serviceResponse.Mensagem = ex.Message;
-        //        serviceResponse.Sucesso = false;
-        //    }
-
-        //    return serviceResponse;
-
-        //}
-        //}
         public async Task<ServiceResponse<List<FuncionarioModel>>> UpdateFuncionario(FuncionarioModel editaFuncionario)
         {
             ServiceResponse<List<FuncionarioModel>> serviceResponse = new ServiceResponse<List<FuncionarioModel>>();

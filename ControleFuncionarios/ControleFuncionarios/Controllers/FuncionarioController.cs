@@ -22,6 +22,20 @@ namespace ControleFuncionarios.Controllers
             return Ok(await _funcionarioService.GetFuncionarios());
         }
 
+        [HttpGet("funcionario-ativo")]
+        public async Task<ActionResult<ServiceResponse<List<FuncionarioModel>>>> GetFuncionariosAtivo()
+        {
+            return Ok(await _funcionarioService.GetFuncionariosAtivo());
+        }
+
+        [HttpGet("funcionario-inativo")]
+        public async Task<ActionResult<ServiceResponse<List<FuncionarioModel>>>> GetFuncionariosInativo()
+        {
+            return Ok(await _funcionarioService.GetFuncionariosInativo());
+        }
+
+
+
         [HttpGet("{id}")]
         public async Task<ActionResult<ServiceResponse<FuncionarioModel>>> GetFuncionarioById(int id)
         {

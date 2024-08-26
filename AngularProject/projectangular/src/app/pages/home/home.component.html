@@ -1,15 +1,33 @@
 
-<mat-card>
+<mat-card class="mat-card-container">
 <div class="funcionario-box">
   <button mat-raised-button color="primary" routerLink="/cadastro">Cadastrar novo funcionário</button>
-    <div class="input-box">
+  <!-- <button mat-raised-button color="accent" (click)="showTodos()">Todos</button>
+  <button mat-raised-button color="primary" (click)="showAtivos()">Ativos</button>
+  <button mat-raised-button color="warn" (click)="showInativos()">Inativos</button> -->
+
+<div class="input-status-container">
+    <div class="input-box1">
       <mat-form-field>
       <mat-label>Procurar:</mat-label>
       <input matInput type="text" placeholder="Buscar funcionário por nome..." (input)="search($event)">
     </mat-form-field>
     </div>
+
+    <div class="status">
+    <mat-form-field appearance="fill" style="width: 150px;">
+      <mat-label>Status</mat-label>
+      <mat-select (selectionChange)="onStatusChange($event.value)">
+        <mat-option value="all">Todos</mat-option>
+        <mat-option value="ativo">Ativos</mat-option>
+        <mat-option value="inativo">Inativos</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  </div>
 </div>
-<table mat-table [dataSource]="funcionarios" class="mat-elevation-z8">
+<!-- <div class="table-container"> -->
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
   <!--- Note that these columns can be defined in any order.
         The actual rendered columns are set as a property on the row definition" -->
@@ -65,5 +83,9 @@
   <tr mat-header-row *matHeaderRowDef="colunas"></tr>
   <tr mat-row *matRowDef="let row; columns: colunas;"></tr>
 </table>
+
+  <mat-paginator [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]" showFirstLastButtons></mat-paginator>
+
+<!-- </div> -->
 </mat-card>
 
