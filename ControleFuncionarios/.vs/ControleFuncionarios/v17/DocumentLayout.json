@@ -65,8 +65,7 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAABPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-12T23:24:55.624Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -79,8 +78,7 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAACMBAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-12T23:24:25.388Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -92,8 +90,7 @@
               "RelativeToolTip": "ControleFuncionarios\\Enums\\TurnoEnum.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAA0AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-13T01:34:01.63Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-13T01:34:01.63Z"
             },
             {
               "$type": "Document",
@@ -105,8 +102,7 @@
               "RelativeToolTip": "ControleFuncionarios\\Enums\\DepartamentoEnum.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-13T01:32:36.007Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-13T01:32:36.007Z"
             },
             {
               "$type": "Document",
@@ -118,8 +114,7 @@
               "RelativeToolTip": "ControleFuncionarios\\Models\\FuncionarioModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-12T23:54:02.308Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-12T23:54:02.308Z"
             },
             {
               "$type": "Document",
@@ -131,8 +126,7 @@
               "RelativeToolTip": "ControleFuncionarios\\Program.cs",
               "ViewState": "AQIAAAwAAAAAAAAAAAAAACcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-12T23:46:02.629Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-12T23:46:02.629Z"
             }
           ]
         }
