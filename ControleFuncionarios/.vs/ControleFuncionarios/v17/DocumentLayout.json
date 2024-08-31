@@ -7,28 +7,28 @@
       "RelativeMoniker": "D:0:0:{382D3356-7475-4967-AFAF-3FB9A85539D3}|ControleFuncionarios\\ControleFuncionarios.csproj|solutionrelative:controlefuncionarios\\controllers\\funcionariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{382D3356-7475-4967-AFAF-3FB9A85539D3}|ControleFuncionarios\\ControleFuncionarios.csproj|C:\\ProjetoFaculdade\\ControleFuncionarios\\controlefuncionarios\\services\\funcionarioservice\\ifuncionarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{382D3356-7475-4967-AFAF-3FB9A85539D3}|ControleFuncionarios\\ControleFuncionarios.csproj|solutionrelative:controlefuncionarios\\services\\funcionarioservice\\ifuncionarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{382D3356-7475-4967-AFAF-3FB9A85539D3}|ControleFuncionarios\\ControleFuncionarios.csproj|C:\\ProjetoFaculdade\\ControleFuncionarios\\controlefuncionarios\\services\\funcionarioservice\\funcionarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{382D3356-7475-4967-AFAF-3FB9A85539D3}|ControleFuncionarios\\ControleFuncionarios.csproj|solutionrelative:controlefuncionarios\\services\\funcionarioservice\\funcionarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{382D3356-7475-4967-AFAF-3FB9A85539D3}|ControleFuncionarios\\ControleFuncionarios.csproj|C:\\ProjetoFaculdade\\ControleFuncionarios\\controlefuncionarios\\models\\funcionariomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{382D3356-7475-4967-AFAF-3FB9A85539D3}|ControleFuncionarios\\ControleFuncionarios.csproj|solutionrelative:controlefuncionarios\\models\\funcionariomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{382D3356-7475-4967-AFAF-3FB9A85539D3}|ControleFuncionarios\\ControleFuncionarios.csproj|C:\\ProjetoFaculdade\\ControleFuncionarios\\controlefuncionarios\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{382D3356-7475-4967-AFAF-3FB9A85539D3}|ControleFuncionarios\\ControleFuncionarios.csproj|solutionrelative:controlefuncionarios\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{382D3356-7475-4967-AFAF-3FB9A85539D3}|ControleFuncionarios\\ControleFuncionarios.csproj|C:\\ProjetoFaculdade\\ControleFuncionarios\\controlefuncionarios\\enums\\departamentoenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{382D3356-7475-4967-AFAF-3FB9A85539D3}|ControleFuncionarios\\ControleFuncionarios.csproj|solutionrelative:controlefuncionarios\\enums\\departamentoenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{382D3356-7475-4967-AFAF-3FB9A85539D3}|ControleFuncionarios\\ControleFuncionarios.csproj|C:\\ProjetoFaculdade\\ControleFuncionarios\\controlefuncionarios\\enums\\turnoenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{382D3356-7475-4967-AFAF-3FB9A85539D3}|ControleFuncionarios\\ControleFuncionarios.csproj|solutionrelative:controlefuncionarios\\enums\\turnoenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{382D3356-7475-4967-AFAF-3FB9A85539D3}|ControleFuncionarios\\ControleFuncionarios.csproj|C:\\ProjetoFaculdade\\ControleFuncionarios\\controlefuncionarios\\enums\\departamentoenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{382D3356-7475-4967-AFAF-3FB9A85539D3}|ControleFuncionarios\\ControleFuncionarios.csproj|solutionrelative:controlefuncionarios\\enums\\departamentoenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{382D3356-7475-4967-AFAF-3FB9A85539D3}|ControleFuncionarios\\ControleFuncionarios.csproj|C:\\ProjetoFaculdade\\ControleFuncionarios\\controlefuncionarios\\models\\funcionariomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{382D3356-7475-4967-AFAF-3FB9A85539D3}|ControleFuncionarios\\ControleFuncionarios.csproj|solutionrelative:controlefuncionarios\\models\\funcionariomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{382D3356-7475-4967-AFAF-3FB9A85539D3}|ControleFuncionarios\\ControleFuncionarios.csproj|C:\\ProjetoFaculdade\\ControleFuncionarios\\controlefuncionarios\\services\\funcionarioservice\\funcionarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{382D3356-7475-4967-AFAF-3FB9A85539D3}|ControleFuncionarios\\ControleFuncionarios.csproj|solutionrelative:controlefuncionarios\\services\\funcionarioservice\\funcionarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{382D3356-7475-4967-AFAF-3FB9A85539D3}|ControleFuncionarios\\ControleFuncionarios.csproj|C:\\ProjetoFaculdade\\ControleFuncionarios\\controlefuncionarios\\services\\funcionarioservice\\ifuncionarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{382D3356-7475-4967-AFAF-3FB9A85539D3}|ControleFuncionarios\\ControleFuncionarios.csproj|solutionrelative:controlefuncionarios\\services\\funcionarioservice\\ifuncionarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{382D3356-7475-4967-AFAF-3FB9A85539D3}|ControleFuncionarios\\ControleFuncionarios.csproj|C:\\ProjetoFaculdade\\ControleFuncionarios\\controlefuncionarios\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{382D3356-7475-4967-AFAF-3FB9A85539D3}|ControleFuncionarios\\ControleFuncionarios.csproj|solutionrelative:controlefuncionarios\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -48,7 +48,7 @@
               "RelativeDocumentMoniker": "ControleFuncionarios\\Controllers\\FuncionarioController.cs",
               "ToolTip": "C:\\ProjetoFaculdade\\ControleFuncionarios\\ControleFuncionarios\\Controllers\\FuncionarioController.cs",
               "RelativeToolTip": "ControleFuncionarios\\Controllers\\FuncionarioController.cs",
-              "ViewState": "AQIAABYAAAAAAAAAAAAQwCEAAABCAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACEAAABCAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-12T23:20:09.509Z",
               "IsPinned": true,
@@ -56,33 +56,35 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "IFuncionarioService.cs",
               "DocumentMoniker": "C:\\ProjetoFaculdade\\ControleFuncionarios\\ControleFuncionarios\\Services\\FuncionarioService\\IFuncionarioService.cs",
               "RelativeDocumentMoniker": "ControleFuncionarios\\Services\\FuncionarioService\\IFuncionarioService.cs",
               "ToolTip": "C:\\ProjetoFaculdade\\ControleFuncionarios\\ControleFuncionarios\\Services\\FuncionarioService\\IFuncionarioService.cs",
               "RelativeToolTip": "ControleFuncionarios\\Services\\FuncionarioService\\IFuncionarioService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAoAAABPAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAABPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-12T23:24:55.624Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "FuncionarioService.cs",
               "DocumentMoniker": "C:\\ProjetoFaculdade\\ControleFuncionarios\\ControleFuncionarios\\Services\\FuncionarioService\\FuncionarioService.cs",
               "RelativeDocumentMoniker": "ControleFuncionarios\\Services\\FuncionarioService\\FuncionarioService.cs",
               "ToolTip": "C:\\ProjetoFaculdade\\ControleFuncionarios\\ControleFuncionarios\\Services\\FuncionarioService\\FuncionarioService.cs",
               "RelativeToolTip": "ControleFuncionarios\\Services\\FuncionarioService\\FuncionarioService.cs",
-              "ViewState": "AQIAAKMAAAAAAAAAAAAYwK0AAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACMBAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-12T23:24:25.388Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "TurnoEnum.cs",
               "DocumentMoniker": "C:\\ProjetoFaculdade\\ControleFuncionarios\\ControleFuncionarios\\Enums\\TurnoEnum.cs",
               "RelativeDocumentMoniker": "ControleFuncionarios\\Enums\\TurnoEnum.cs",
@@ -90,11 +92,12 @@
               "RelativeToolTip": "ControleFuncionarios\\Enums\\TurnoEnum.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAA0AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-13T01:34:01.63Z"
+              "WhenOpened": "2024-08-13T01:34:01.63Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 1,
               "Title": "DepartamentoEnum.cs",
               "DocumentMoniker": "C:\\ProjetoFaculdade\\ControleFuncionarios\\ControleFuncionarios\\Enums\\DepartamentoEnum.cs",
               "RelativeDocumentMoniker": "ControleFuncionarios\\Enums\\DepartamentoEnum.cs",
@@ -102,7 +105,8 @@
               "RelativeToolTip": "ControleFuncionarios\\Enums\\DepartamentoEnum.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-13T01:32:36.007Z"
+              "WhenOpened": "2024-08-13T01:32:36.007Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -114,19 +118,21 @@
               "RelativeToolTip": "ControleFuncionarios\\Models\\FuncionarioModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-12T23:54:02.308Z"
+              "WhenOpened": "2024-08-12T23:54:02.308Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\ProjetoFaculdade\\ControleFuncionarios\\ControleFuncionarios\\Program.cs",
               "RelativeDocumentMoniker": "ControleFuncionarios\\Program.cs",
               "ToolTip": "C:\\ProjetoFaculdade\\ControleFuncionarios\\ControleFuncionarios\\Program.cs",
               "RelativeToolTip": "ControleFuncionarios\\Program.cs",
-              "ViewState": "AQIAABUAAAAAAAAAAAAAAFYAAAAKAAAA",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAACcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-12T23:46:02.629Z"
+              "WhenOpened": "2024-08-12T23:46:02.629Z",
+              "EditorCaption": ""
             }
           ]
         }

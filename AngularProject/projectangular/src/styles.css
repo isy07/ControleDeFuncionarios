@@ -2,7 +2,6 @@ html, body{
   width: 90vw;
   height: 40vw;
   font-size: 62.5%;
-  /* overflow: hidden; */
 }
 
 mat-card{

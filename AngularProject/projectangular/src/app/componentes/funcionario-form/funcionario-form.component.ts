@@ -29,11 +29,9 @@ export class FuncionarioFormComponent implements OnInit {
       dataCriacao: new FormControl(new Date()),
       dataAlteracao: new FormControl(new Date()),
     })
-
   }
 
   submit(){
     this.onSubmit.emit(this.funcionarioForm.value);
   }
-
 }

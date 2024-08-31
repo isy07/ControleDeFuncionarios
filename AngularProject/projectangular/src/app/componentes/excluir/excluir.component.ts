@@ -43,27 +43,18 @@ export class ExcluirComponent implements OnInit{
   Excluir(){
     this.funcionarioService.ExcluirFuncionario(this.inputData.id).subscribe((data)=>{
       this.toastr.success('Funcionário excluído com Sucesso!', 'Sucesso');
-      this.notificationService.notifyDelete(); // Notifica o componente pai
+      this.notificationService.notifyDelete();
       this.ref.close();
 
 
     },
     (error) => {
-      this.toastr.error('Erro ao cadastrar funcionário!', 'Erro');
+      this.toastr.error('Erro ao excluir funcionário!', 'Erro');
     }
-  )
+   )
   }
 
   Cancelar(){
     this.ref.close
   }
 }
-
-
-// (data) => {
-//   this.router.navigate(['/'])
-//   this.toastr.success('Funcionario cadastrado com Sucesso!', 'Sucesso');
-// },
-// (error) => {
-//   this.toastr.error('Erro ao cadastrar funcionário!', 'Erro');
-// }

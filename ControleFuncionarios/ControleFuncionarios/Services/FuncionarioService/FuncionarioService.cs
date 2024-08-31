@@ -55,8 +55,6 @@ namespace ControleFuncionarios.Services.FuncionarioService
                 serviceResponse.Sucesso = false;
             }
             return serviceResponse;
-
-
         }
 
         public async Task<ServiceResponse<List<FuncionarioModel>>> DeleteFuncionario(int id)
@@ -91,10 +89,6 @@ namespace ControleFuncionarios.Services.FuncionarioService
             }
 
             return serviceResponse;
-
-
-
-
         }
 
         public async Task<ServiceResponse<FuncionarioModel>> GetFuncionarioById(int id)
@@ -121,8 +115,6 @@ namespace ControleFuncionarios.Services.FuncionarioService
                 serviceResponse.Sucesso = false;
             }
             return serviceResponse;
-
-
         }
 
         public async Task<ServiceResponse<List<FuncionarioModel>>> GetFuncionarios()
@@ -144,7 +136,6 @@ namespace ControleFuncionarios.Services.FuncionarioService
                 serviceResponse.Sucesso = false;
             }
             return serviceResponse;
-
         }
 
 
@@ -191,7 +182,6 @@ namespace ControleFuncionarios.Services.FuncionarioService
                 serviceResponse.Sucesso = false;
             }
             return serviceResponse;
-
         }
 
         public async Task<ServiceResponse<List<FuncionarioModel>>> InativaFuncionario(int id)
@@ -232,8 +222,6 @@ namespace ControleFuncionarios.Services.FuncionarioService
             }
 
             return serviceResponse;
-
-
         }
         public async Task<ServiceResponse<List<FuncionarioModel>>> UpdateFuncionario(FuncionarioModel editaFuncionario)
         {
@@ -241,7 +229,6 @@ namespace ControleFuncionarios.Services.FuncionarioService
 
             try
             {
-                // Verifica se o funcionário a ser atualizado existe
                 var funcionarioExistente = await _context.Funcionarios
                     .AsNoTracking()
                     .FirstOrDefaultAsync(x => x.Id == editaFuncionario.Id);
@@ -254,7 +241,6 @@ namespace ControleFuncionarios.Services.FuncionarioService
                     return serviceResponse;
                 }
 
-                // Checa se já existe um funcionário com os mesmos dados (exceto o funcionário sendo atualizado)
                 bool funcionarioExiste = await _context.Funcionarios
                     .AnyAsync(f =>
                         f.Id != editaFuncionario.Id &&
@@ -272,8 +258,6 @@ namespace ControleFuncionarios.Services.FuncionarioService
                     return serviceResponse;
                 }
 
-                // Atualiza os dados do funcionário
-                // Encontre a entidade existente no contexto para atualizar
                 var funcionarioParaAtualizar = _context.Funcionarios.Find(editaFuncionario.Id);
 
                 if (funcionarioParaAtualizar == null)
@@ -284,17 +268,14 @@ namespace ControleFuncionarios.Services.FuncionarioService
                     return serviceResponse;
                 }
 
-                // Atualize as propriedades necessárias
                 funcionarioParaAtualizar.Nome = editaFuncionario.Nome;
                 funcionarioParaAtualizar.Sobrenome = editaFuncionario.Sobrenome;
                 funcionarioParaAtualizar.Departamento = editaFuncionario.Departamento;
                 funcionarioParaAtualizar.Turno = editaFuncionario.Turno;
                 funcionarioParaAtualizar.DataAlteracao = DateTime.Now.ToLocalTime();
 
-                // Salve as alterações
                 await _context.SaveChangesAsync();
 
-                // Retorna a lista atualizada de funcionários
                 serviceResponse.Dados = await _context.Funcionarios.ToListAsync();
                 serviceResponse.Sucesso = true;
             }
@@ -308,4 +289,4 @@ namespace ControleFuncionarios.Services.FuncionarioService
         }
     }
 
-    }
+}

@@ -47,7 +47,7 @@ export class DetalhesComponent implements OnInit {
         }
       },
       (error) => {
-        this.toastr.error('Erro ao cadastrar funcionário!', 'Erro');
+        this.toastr.error('Erro ao ativar ou inativar funcionário!', 'Erro');
       }
     )
   }
